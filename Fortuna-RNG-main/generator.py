@@ -24,7 +24,7 @@ class Generator:
         assert self.key and self.counter
         r = b''
         for i in range(n):
-            r += self.cipher.encrypt(b'\x00' * self.block_size)
+            r += self.cipher.encrypt()
         return r   # 返回16*n字节的随机字节字符串r
 
     # 生成随机数据
